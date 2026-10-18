@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>emp-management -system</title>
+</head>
+<style>
+    body{
+        background-color: rgb(182, 178, 178);
+    }
+.container{
+    height: 700px;
+    width: 700px;
+    border: 1px rgb(87, 85, 85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 400px;
+    margin-top: 100px;
+    background-color: rgb(87, 85, 85);
+    box-shadow: 10px;
+    border-radius: 30px;
+
+}
+</style>
+</style>
+<body>
+    
+    <div class="container">
+        
+            <label ><h3>name: </h3></label>
+            <input type="text" id="Name">
+            <br>
+             <label ><h3>age: </h3></label>
+            <input type="age" id="age">
+            <br>
+            <button onclick="addemployee()">add employee</button>
+            
+
+            <div>
+                <h2>Employee list</h2>
+                <h4 id="output"></h4>
+            </div>
+            
+    </div>
+
+        
+    
+    <script>
+        let employees=[]
+        const addemployee=()=>{
+            let name=document.getElementById("Name",).value
+            let age=document.getElementById("age",).value
+            let employee={
+                name:name,
+                age:age
+            };
+            if (name===""){
+                alert("enter valid name ")
+            }
+            else{ 
+
+            
+            employees.push(employee);
+            displayemployee();
+            console.log(employees);
+        
+    
+            window.alert("employee added");
+            }
+
+        }
+        function displayemployee(){
+            let employeelist=""
+            for(let i=0;i<employees.length;i++){
+
+                employeelist +="Name:"+ employees[i].name +" Age:" +employees[i].age+"<br>";
+
+            }
+            
+            document.getElementById("output").innerHTML =employeelist;
+                
+            
+            }
+        
+    
+       
+
+
+
+    </script>
+</body>
+</html>
